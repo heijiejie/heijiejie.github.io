@@ -53,8 +53,8 @@
     
     <item>
       <title>微信小程序传值以及获取值方法</title>
-      <link>http://yoursite.com/2018/04/04/hello/</link>
-      <guid>http://yoursite.com/2018/04/04/hello/</guid>
+      <link>http://yoursite.com/2018/04/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BC%A0%E5%80%BC%E4%BB%A5%E5%8F%8A%E8%8E%B7%E5%8F%96%E5%80%BC%E6%96%B9%E6%B3%95/</link>
+      <guid>http://yoursite.com/2018/04/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BC%A0%E5%80%BC%E4%BB%A5%E5%8F%8A%E8%8E%B7%E5%8F%96%E5%80%BC%E6%96%B9%E6%B3%95/</guid>
       <pubDate>Wed, 04 Apr 2018 14:21:50 GMT</pubDate>
       <description>
       
@@ -67,26 +67,7 @@
       
       <content:encoded><![CDATA[<h3 id="微信小程序传值以及获取值方法"><a href="#微信小程序传值以及获取值方法" class="headerlink" title="微信小程序传值以及获取值方法"></a>微信小程序传值以及获取值方法</h3><p>微信小程序传值以及获取值方法，传值有两种方法，对应也有获取值得方法，1、设置id的方法标识跳转后传递的参数值；2、通过使用data - xxxx 的方法来标识要传递的值</p><p>微信小程序设置id的方法标识来传值</p><p>在要跳转的item处，设置一个id并给当前的id赋值上对应的key值，比如一部电影的id（后面带着id去下一个页面查询，详细信息）如：</p><p>微信小程序设置id的方法标识跳转来传值</p><p>后我们在js的bindtap的响应事件中获取，并传递到下一个界面中；</p><p>获取到id传的值</p><p>通过e.currentTarget.id;获取设置的id值，并通过设置全局对象的方式来传递数值， 获取全局对象 var app=getApp(); //设置全局的请求访问传递的参数 app.requestDetailid=id;</p><p>微信小程序获取到id传的值</p><p>提示：其实我们也可以在，wxml中查看到我们设置的每一个item的id值</p><p>通过使用data - xxxx 的方法标识来传值</p><p>通过使用data - xxxx 的方法标识来传值，xxxx可以自定义取名 比如data-key等等都可以。</p><p>微信小程序如何获取data-xxxx传递的值？</p><p>如何获取data-xxxx传递的值？</p><p>在js的bindtap的响应事件中：</p><p>通过数据解析一层层找到数据，var id=e.target.dataset.id(根据你的data-id的取名)</p><p>微信小程序如何获取data-xxxx传递的值？</p><p>微信小程序如何跨页面获取值？</p><p>依据上面的方式设置要传递的值，页面跳转后，我们就需要在下一个页面拿到传递的数据（这个数据在传递前，就已经被设置成全局变量）</p><p>在跳转后的js页面，接收传递过来的数据detail.js</p><p>同样通过全局额方式取值出来，（即和app.js中取某个变量的值是一样的）</p><p>var movieid=getApp().MovieDetailid; console.log(movieid);</p><p>微信小程序如何跨页面获取值？</p><p>到此为止，我们数值传递并接收成功，后面就可以根据我们接收的参数，进行进一步的操作了。</p>]]></content:encoded>
       
-      <comments>http://yoursite.com/2018/04/04/hello/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>http://yoursite.com/2018/04/04/hello-world/</link>
-      <guid>http://yoursite.com/2018/04/04/hello-world/</guid>
-      <pubDate>Wed, 04 Apr 2018 13:36:50 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content:encoded>
-      
-      <comments>http://yoursite.com/2018/04/04/hello-world/#disqus_thread</comments>
+      <comments>http://yoursite.com/2018/04/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BC%A0%E5%80%BC%E4%BB%A5%E5%8F%8A%E8%8E%B7%E5%8F%96%E5%80%BC%E6%96%B9%E6%B3%95/#disqus_thread</comments>
     </item>
     
   </channel>
