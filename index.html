@@ -231,6 +231,204 @@ undefined
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/06/微信小游戏的关系链数据/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heijiejie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Heijiejie的博客小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/06/微信小游戏的关系链数据/" itemprop="url">微信小游戏的关系链数据</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-06T16:55:19+08:00">
+                2018-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  423
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="微信用户的关系链数据组成"><a href="#微信用户的关系链数据组成" class="headerlink" title="微信用户的关系链数据组成"></a>微信用户的关系链数据组成</h3><p>包括两部分：</p>
+<p> 该用户好友的用户数据</p>
+<p> 该用户所在的某个群的群成员的用户数据。</p>
+<p>获取关系链数据的API：</p>
+<p> <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getFriendCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getFriendCloudStorage()</a>获取当前用户也玩该小游戏的好友的用户数据</p>
+<p> <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getGroupCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getGroupCloudStorage()</a> 获取当前用户在某个群中也玩该小游戏的成员的用户数据</p>
+<p>API返回的结果为一个对象数组，数组的每一个元素都是一个表示用户数据的对象。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openId</td>
+<td>string</td>
+<td>用户的openId</td>
+</tr>
+<tr>
+<td>avatarUrI</td>
+<td>string</td>
+<td>用户的微信头像url</td>
+</tr>
+<tr>
+<td>nickName</td>
+<td>string</td>
+<td>用户的微信昵称</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>用户的游戏数据</td>
+</tr>
+</tbody>
+</table>
+<h3 id="关系链数据的应用场景"><a href="#关系链数据的应用场景" class="headerlink" title="关系链数据的应用场景"></a>关系链数据的应用场景</h3><p>例如 用户的段位、战绩、积分等排行榜，这些游戏业务特有的数据，都可以用到这个功能。</p>
+<p>通过调用 <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.setUserCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.setUserCloudStorage()</a> 可以将当前用户的游戏数据托管在微信后台。只有被托管过数据的用户，才会被视为 <code>玩过</code> 该小游戏的用户，才会出现在 <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getFriendCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getFriendCloudStorage()</a> 和 <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getGroupCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getGroupCloudStorage()</a>返回的对象数组中。</p>
+<p>除此之外，我们还提供了以下 API：</p>
+<ul>
+<li><a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.removeUserCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.removeUserCloudStorage()</a> 删除用户托管数据中指定字段的数据</li>
+<li><a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getUserCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getUserCloudStorage()</a> 获取当前用户的托管数据</li>
+</ul>
+<p><a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getUserCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getUserCloudStorage</a>、<a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getFriendCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getFriendCloudStorage()</a> 和 <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.getGroupCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.getGroupCloudStorage()</a> 只能在 <code>开放数据域</code>中调用。<br><a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.setUserCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.setUserCloudStorage()</a> 和 <a href="https://developers.weixin.qq.com/minigame/dev/document/open-api/data/wx.removeUserCloudStorage.html?t=2018329" target="_blank" rel="noopener">wx.removeUserCloudStorage()</a> 可以同时在 <code>主域</code> 和开放数据域中调用。</p>
+<h3 id="展示关系链数据"><a href="#展示关系链数据" class="headerlink" title="展示关系链数据"></a>展示关系链数据</h3><p>如果想要展示通过关系链 API 获取到的用户数据，如绘制排行榜等业务场景，需要将排行榜绘制到 <code>sharedCanvas</code> 上，再在主域将 sharedCanvas 渲染上屏。</p>
+<p><a href="https://developers.weixin.qq.com/minigame/dev/tutorial/images/open-data/data-flow.png" target="_blank" rel="noopener"><img src="https://developers.weixin.qq.com/minigame/dev/tutorial/images/open-data/data-flow.png" alt="img"></a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/06/Markdown-语法的简要规则/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -819,7 +1017,7 @@ undefined
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -900,7 +1098,7 @@ undefined
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.3k</span>
+    <span title="Site words total count">1.7k</span>
   
 </div>
 
@@ -924,7 +1122,7 @@ undefined
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.3k字</span>
+  <span class="post-count">博客全站共1.7k字</span>
 </div>
         
 
