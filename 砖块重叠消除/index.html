@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="Heijiejie的博客小站" type="application/atom+xml" />
 
@@ -81,13 +83,22 @@
 
 
 
+<meta name="description" content="Hextris 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		  	 	 		 		 		 		 			 		 		 		 		 		 		HIGH SCORE 		 		 			HIGH SCORE10292 		 		 			 				GAME OVER">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Heijiejie的博客小站">
-<meta property="og:url" content="http://yoursite.com/archives/2018/04/index.html">
+<meta property="og:url" content="http://yoursite.com/砖块重叠消除/index.html">
 <meta property="og:site_name" content="Heijiejie的博客小站">
+<meta property="og:description" content="Hextris 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		  	 	 		 		 		 		 			 		 		 		 		 		 		HIGH SCORE 		 		 			HIGH SCORE10292 		 		 			 				GAME OVER">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/砖块重叠消除/images/btn_help.svg">
+<meta property="og:image" content="http://yoursite.com/砖块重叠消除/images/btn_pause.svg">
+<meta property="og:image" content="http://yoursite.com/砖块重叠消除/images/btn_restart.svg">
+<meta property="og:image" content="http://yoursite.com/砖块重叠消除/images/btn_restart.svg">
+<meta property="og:updated_time" content="2017-12-25T03:16:40.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Heijiejie的博客小站">
+<meta name="twitter:description" content="Hextris 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		  	 	 		 		 		 		 			 		 		 		 		 		 		HIGH SCORE 		 		 			HIGH SCORE10292 		 		 			 				GAME OVER">
+<meta name="twitter:image" content="http://yoursite.com/砖块重叠消除/images/btn_help.svg">
 
 
 
@@ -117,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/04/"/>
+  <link rel="canonical" href="http://yoursite.com/砖块重叠消除/"/>
 
 
 
 
 
-  <title>Archive | Heijiejie的博客小站</title>
+  <title> | Heijiejie的博客小站</title>
   
 
 
@@ -142,7 +153,7 @@ undefined
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,148 +227,126 @@ undefined
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 3 posts in total. Keep on posting.
-      </span>
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
+        
+        
+          <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hextris</title>
+		<meta name="apple-itunes-app" content="app-id=903769553">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui">
+		
+		<link href="http://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet" type="text/css">
+		
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script type="text/javascript" src="vendor/hammer.min.js"></script>
+		<script type="text/javascript" src="vendor/js.cookie.js"></script>
+		<script type="text/javascript" src="vendor/jsonfn.min.js"></script>
+		<script type="text/javascript" src="vendor/keypress.min.js"></script>
+		<script type="text/javascript" src="vendor/jquery.js"></script>
+		<script type="text/javascript" src="js/save-state.js"></script>
+		<script type="text/javascript" src="js/view.js"></script>
+		<script type="text/javascript" src="js/wavegen.js"></script>
+		<script type="text/javascript" src="js/math.js"></script>
+		<script type="text/javascript" src="js/Block.js"></script>
+		<script type="text/javascript" src="js/Hex.js"></script>
+		<script type="text/javascript" src="js/Text.js"></script>
+		<script type="text/javascript" src="js/comboTimer.js"></script>
+		<script type="text/javascript" src="js/checking.js"></script>
+		<script type="text/javascript" src="js/update.js"></script>
+		<script type="text/javascript" src="js/render.js"></script>
+		<script type="text/javascript" src="js/input.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/initialization.js"></script>
+		<script src="vendor/sweet-alert.min.js"></script>
+
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<div id="overlay" class="faded overlay"></div>
+		<div id="startBtn"></div>
+		<div id="helpScreen" class="unselectable">
+			<div id="inst_main_body"></div>
+		</div>
+		<img id="openSideBar" class="helpText" src="./images/btn_help.svg">
+		<div class="faded overlay"></div>
+		<img id="pauseBtn" src="./images/btn_pause.svg">
+		<img id="restartBtn" src="./images/btn_restart.svg">
+		<div id="HIGHSCORE">HIGH SCORE</div>
+		
+		<div id="highScoreInGameText">
+			<div id="highScoreInGameTextHeader">HIGH SCORE</div><div id="currentHighScore">10292</div>
+		</div>
+		<div id="gameoverscreen">
+			<div id="container">
+				<div id="gameOverBox" class="GOTitle">GAME OVER</div>
+				<div id="cScore">1843</div>
+				<div id="highScoresTitle" class="GOTitle">HIGH SCORES</div>
+				<div class="score"><span class="scoreNum">1.</span> <div id="1place" style="display:inline;">0</div></div>
+				<div class="score"><span class="scoreNum">2.</span> <div id="2place" style="display:inline;">0</div></div>
+				<div class="score"><span class="scoreNum">3.</span> <div id="3place" style="display:inline;">0</div></div>
+			</div>
+			<div id="bottomContainer">
+				<img id="restart" src="./images/btn_restart.svg" height="57px">
+				<div id="socialShare">
+					<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+					<svg width="224.6377px" height="57px" viewbox="0 0 255 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>Share button</title>
+						<defs>
+						</defs>
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+							<g id="Game-over-" sketch:type="MSArtboardGroup" transform="translate(-95.000000, -565.000000)">
+								<g id="Share-button" sketch:type="MSLayerGroup" transform="translate(95.000000, 565.000000)">
+								
+									
+								</g>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div id="buttonCont">
+					<ul class="rrssb-buttons">
+						
+						
+				</ul>
+					
+				</div>
+			</div>
+		</div>
+			
+
+	<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+</html>
 
         
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/06/Markdown-语法的简要规则/" itemprop="url">
-              
-                <span itemprop="name">Markdown 语法的简要规则</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-06T16:48:15+08:00"
-              content="2018-04-06" >
-          04-06
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/04/hello/" itemprop="url">
-              
-                <span itemprop="name">微信小程序传值以及获取值方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-04T22:21:50+08:00"
-              content="2018-04-04" >
-          04-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/04/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-04T21:36:50+08:00"
-              content="2018-04-04" >
-          04-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
     </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -365,6 +354,10 @@ undefined
 
 
           
+
+  
+
+
 
         </div>
         
@@ -604,6 +597,10 @@ undefined
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
