@@ -8,20 +8,8 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="%5Bobject%20Object%5D" rel="hub"/>
     <description>heijiejie的博客小站</description>
-    <pubDate>Fri, 06 Apr 2018 10:48:24 GMT</pubDate>
+    <pubDate>Fri, 06 Apr 2018 10:36:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>categories</title>
-      <link>http://yoursite.com/2018/04/06/categories/</link>
-      <guid>http://yoursite.com/2018/04/06/categories/</guid>
-      <pubDate>Fri, 06 Apr 2018 10:48:24 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://yoursite.com/2018/04/06/categories/#disqus_thread</comments>
-    </item>
     
     <item>
       <title>微信小游戏的关系链数据</title>
