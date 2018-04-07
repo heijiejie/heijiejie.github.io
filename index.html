@@ -343,156 +343,6 @@ undefined
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/javascript-字符串拆开与合合并/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="heijiejie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/littlegirl.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="heijiejie的博客小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/07/javascript-字符串拆开与合合并/" itemprop="url">javascript 字符串拆开与合合并</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-07T22:25:39+08:00">
-                2018-04-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/my-first-javascript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -641,7 +491,7 @@ undefined
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p><img src="/2018/04/07/my-first-javascript/../images/1523111640206.png" alt="152308200835"></p>
+</code></pre><p><img src="https://dn-coding-net-production-file.qbox.me/d9fe96e0-3a77-11e8-aff5-0fa248bcf535.png?e=1523118322&amp;token=goE9CtaiT5YaIP6ZQ1nAafd_C1Z_H2gVP8AwuC-5:DpSEzKKTaRT_KAC3o5c_QB5tl0Y=" alt="img"></p>
 <h3 id="JS获取输入字符串并将实现大小写字母切换"><a href="#JS获取输入字符串并将实现大小写字母切换" class="headerlink" title="JS获取输入字符串并将实现大小写字母切换"></a>JS获取输入字符串并将实现大小写字母切换</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">js</span>字母大小写转换方法：</span><br><span class="line">1<span class="selector-class">.toLocaleUpperCase</span>()</span><br><span class="line">2<span class="selector-class">.toUpperCase</span>()</span><br><span class="line">3<span class="selector-class">.toLocaleLowerCase</span>()</span><br><span class="line">4<span class="selector-class">.toLowerCase</span>() </span><br><span class="line"></span><br><span class="line">下面就这四个实现大小写转换的<span class="selector-tag">js</span>函数逐一做简单的分析。</span><br><span class="line">1<span class="selector-class">.toLocaleUpperCase</span> </span><br><span class="line">将字符串中所有的字母字符都将被转换为大写的，同时适应宿主环境的当前区域设置。</span><br><span class="line"> </span><br><span class="line">2<span class="selector-class">.toUpperCase</span></span><br><span class="line">将字符串中的所有字母都被转化为大写字母。</span><br><span class="line"> </span><br><span class="line">3<span class="selector-class">.toLocaleLowerCase</span> </span><br><span class="line">将字符串所有的字母字符都被转换为小写，同时考虑到宿主环境的当前区域设置。</span><br><span class="line"> </span><br><span class="line">4<span class="selector-class">.toLowerCase</span></span><br><span class="line">将字符串中的字母被转换为小写字母</span><br></pre></td></tr></table></figure>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -667,7 +517,7 @@ undefined
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p><img src="/2018/04/07/my-first-javascript/../images/1523111702014.png" alt="152308324369"></p>
+</code></pre><p><img src="https://dn-coding-net-production-file.qbox.me/da046340-3a77-11e8-aff5-0fa248bcf535.png?e=1523118308&amp;token=goE9CtaiT5YaIP6ZQ1nAafd_C1Z_H2gVP8AwuC-5:DBPlMvpVbxEtDrhAmBDYkvf-bp8=" alt="img"></p>
 
           
         
@@ -1586,7 +1436,7 @@ undefined
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
