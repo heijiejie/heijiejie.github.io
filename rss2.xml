@@ -8,8 +8,29 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="%5Bobject%20Object%5D" rel="hub"/>
     <description>heijiejie的博客小站</description>
-    <pubDate>Sat, 07 Apr 2018 04:39:17 GMT</pubDate>
+    <pubDate>Sat, 07 Apr 2018 09:28:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>my first javascript</title>
+      <link>http://yoursite.com/2018/04/07/my-first-javascript/</link>
+      <guid>http://yoursite.com/2018/04/07/my-first-javascript/</guid>
+      <pubDate>Sat, 07 Apr 2018 06:15:48 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;###JS实时获取输入框中的值&lt;/p&gt;
+&lt;p&gt;　　实时获取input输入框中的值需要oninput和onpropertychange属性来实现。原因是onpropertychange属性为IE专属，而oninput属性支持大部分浏览器包括IE9及以上的版本。&lt;/p&gt;
+&lt;p&gt;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>###JS实时获取输入框中的值</p><p>　　实时获取input输入框中的值需要oninput和onpropertychange属性来实现。原因是onpropertychange属性为IE专属，而oninput属性支持大部分浏览器包括IE9及以上的版本。</p><p>　　oninput与onpropertychange失效的情况：<br>　　oninput事件：</p><p>​        1.在脚本中改变value时，不会触发；</p><p>​    2.从浏览器的自动下拉提示中选取时，不会触发。</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;body&gt;    &lt;input type=&quot;text&quot; id=&quot;userdata&quot;  name=&quot;test&quot;&gt;    &lt;output type=&quot;text&quot; id=&quot;user&quot;  name=&quot;test&quot;&gt;    &lt;script&gt;    var data = document.getElementById(&apos;userdata&apos;);    if(&apos;oninput&apos; in data){             data.addEventListener(&quot;input&quot;,getWord,false);         }else{             data.onpropertychange = getWord;         }        function getWord(){        document.getElementById(&quot;user&quot;).innerHTML = data.value;    }    &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1523082008358.png" alt="52308200835"></p><h3 id="JS获取输入字符串并将实现大小写字母切换"><a href="#JS获取输入字符串并将实现大小写字母切换" class="headerlink" title="JS获取输入字符串并将实现大小写字母切换"></a>JS获取输入字符串并将实现大小写字母切换</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">js</span>字母大小写转换方法：</span><br><span class="line">1<span class="selector-class">.toLocaleUpperCase</span>()</span><br><span class="line">2<span class="selector-class">.toUpperCase</span>()</span><br><span class="line">3<span class="selector-class">.toLocaleLowerCase</span>()</span><br><span class="line">4<span class="selector-class">.toLowerCase</span>() </span><br><span class="line"></span><br><span class="line">下面就这四个实现大小写转换的<span class="selector-tag">js</span>函数逐一做简单的分析。</span><br><span class="line">1<span class="selector-class">.toLocaleUpperCase</span> </span><br><span class="line">将字符串中所有的字母字符都将被转换为大写的，同时适应宿主环境的当前区域设置。</span><br><span class="line"> </span><br><span class="line">2<span class="selector-class">.toUpperCase</span></span><br><span class="line">将字符串中的所有字母都被转化为大写字母。</span><br><span class="line"> </span><br><span class="line">3<span class="selector-class">.toLocaleLowerCase</span> </span><br><span class="line">将字符串所有的字母字符都被转换为小写，同时考虑到宿主环境的当前区域设置。</span><br><span class="line"> </span><br><span class="line">4<span class="selector-class">.toLowerCase</span></span><br><span class="line">将字符串中的字母被转换为小写字母</span><br></pre></td></tr></table></figure><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;    &lt;title&gt;大小写字母转换&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;p&gt;大小写字母转换.&lt;/p&gt;    &lt;form id=&quot;test-form&quot;&gt;        &lt;input type=&quot;text&quot; id=&quot;userdata&quot;  name=&quot;test&quot;&gt;        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Submit&lt;/button&gt;        &lt;button type=&quot;reset&quot;&gt;重置&lt;/button&gt;    &lt;/form&gt;    &lt;output type=&quot;text&quot; id=&quot;user&quot;  name=&quot;test&quot;&gt;    &lt;script&gt;        function myFunction()        {          var data = document.getElementById(&apos;userdata&apos;);          alert(data.value.toUpperCase()); //弹对话框显示输出值          document.getElementById(&quot;user&quot;).innerHTML = data.value.toUpperCase();//直接显示输出值        }    &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1523084039251.png" alt="52308324369"></p>]]></content:encoded>
+      
+      <comments>http://yoursite.com/2018/04/07/my-first-javascript/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>hexo常用命令</title>
