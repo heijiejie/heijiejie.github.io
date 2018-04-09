@@ -136,13 +136,13 @@
 
 
 
-<meta name="description" content="LayaAir 源码结构分析Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。 例程：输出HelloWord：1.创建一个精灵（或者精灵的扩展类的实例）2.给实例设置内容（Helloword）3.设置实例的坐标等属性4.把实例添加到舞台（stage）上。选中类（Laya.Text）点F1">
+<meta name="description" content="LayaAir 源码结构分析Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。 例程：输出HelloWord：">
 <meta name="keywords" content="javascript,LayaAir">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LayaAir引擎初步认识(面向JS开发者)">
 <meta property="og:url" content="http://yoursite.com/2018/04/08/LayaAir引擎初步认识-面向JS开发者/index.html">
 <meta property="og:site_name" content="heijiejie的博客小站">
-<meta property="og:description" content="LayaAir 源码结构分析Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。 例程：输出HelloWord：1.创建一个精灵（或者精灵的扩展类的实例）2.给实例设置内容（Helloword）3.设置实例的坐标等属性4.把实例添加到舞台（stage）上。选中类（Laya.Text）点F1">
+<meta property="og:description" content="LayaAir 源码结构分析Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。 例程：输出HelloWord：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3497289-70634cb0798188d5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3497289-83d7f6e80ad4608b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -150,10 +150,10 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3497289-2b3da937a4214440.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3497289-4e1a8f7fe71d6625.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3497289-4efb3297965ccf7a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-09T17:36:56.926Z">
+<meta property="og:updated_time" content="2018-04-09T17:46:51.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LayaAir引擎初步认识(面向JS开发者)">
-<meta name="twitter:description" content="LayaAir 源码结构分析Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。 例程：输出HelloWord：1.创建一个精灵（或者精灵的扩展类的实例）2.给实例设置内容（Helloword）3.设置实例的坐标等属性4.把实例添加到舞台（stage）上。选中类（Laya.Text）点F1">
+<meta name="twitter:description" content="LayaAir 源码结构分析Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。 例程：输出HelloWord：">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3497289-70634cb0798188d5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -483,8 +483,9 @@ undefined
 
       
         <h3 id="LayaAir-源码结构分析"><a href="#LayaAir-源码结构分析" class="headerlink" title="LayaAir 源码结构分析"></a>LayaAir 源码结构分析</h3><p>Layabox 是搜游网络科技（北京）有限公司打造的中国顶级游戏引擎提供商品牌，旗下第二代引擎 LayaAir 是全球首款基于 HTML5 协议的全能型开源引擎。</p>
-<p>例程：输出HelloWord：<br>1.创建一个精灵（或者精灵的扩展类的实例）<br>2.给实例设置内容（Helloword）<br>3.设置实例的坐标等属性<br>4.把实例添加到舞台（stage）上。<br>选中类（Laya.Text）点F12查看类的实现<br>pivot是设置实例的轴心点</p>
+<p>例程：输出HelloWord：</p>
 <a id="more"></a>
+<p>1.创建一个精灵（或者精灵的扩展类的实例）<br>2.给实例设置内容（Helloword）<br>3.设置实例的坐标等属性<br>4.把实例添加到舞台（stage）上。<br>选中类（Laya.Text）点F12查看类的实现<br>pivot是设置实例的轴心点</p>
 <p>helloworld 源码：</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">Laya.init(<span class="number">600</span>, <span class="number">400</span>,Laya.WebGL);<span class="comment">//初始化引擎 w h 是否使用webGL渲染</span></span><br><span class="line">Laya.stage.scaleMode = Laya.Stage.SCALE_SHOWALL;<span class="comment">//屏幕缩放模式</span></span><br><span class="line">Laya.stage.alignW = Laya.Stage.ALIGN_CENTER;<span class="comment">//水平对齐方式</span></span><br><span class="line">Laya.stage.alignV = Laya.Stage.ALIGN_MIDDLE;<span class="comment">//垂直对齐方式</span></span><br><span class="line">Laya.stage.screenMode = Laya.Stage.SCREEN_HORIZONTAL;<span class="comment">//屏幕适配</span></span><br><span class="line">var tx = new Laya.Text();<span class="comment">//实现hello world</span></span><br><span class="line">tx.text = <span class="string">"hello world"</span>;<span class="comment">//设置内容</span></span><br><span class="line">tx.pos(Laya.stage.width/<span class="number">2</span>,Laya.stage.height/<span class="number">2</span>);<span class="comment">//设置文本位置</span></span><br><span class="line">tx.color = <span class="string">"#ccc"</span>; <span class="comment">//文本颜色</span></span><br><span class="line">tx.fontSize = <span class="number">66</span>;    <span class="comment">//文本大小</span></span><br><span class="line">tx.pivot(tx.width/<span class="number">2</span>,tx.height/<span class="number">2</span>);  <span class="comment">//文本的轴心点</span></span><br><span class="line">Laya.stage.addChild(tx);  <span class="comment">//添加到屏幕</span></span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
 <p> LayaAir引擎支持Canvas渲染模式与WebGL渲染模式，以下将分别对两种不同模式的参数进行逐一解释。</p>
@@ -868,7 +869,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.2k</span>
+    <span title="Site words total count">7.0k</span>
   
 </div>
 
