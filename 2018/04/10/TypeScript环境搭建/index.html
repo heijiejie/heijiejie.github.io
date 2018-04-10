@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="TypeScript,javascript," />
+  <meta name="keywords" content="javascript,TypeScript," />
 
 
 
@@ -137,7 +137,7 @@
 
 
 <meta name="description" content="阅读目录  [环境搭建] [第一部分、简介] [第二部分、环境准备] [第三部分、使用Visual Studio Code进行开发] [其他相关内容]">
-<meta name="keywords" content="TypeScript,javascript">
+<meta name="keywords" content="javascript,TypeScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TypeScript环境搭建">
 <meta property="og:url" content="http://yoursite.com/2018/04/10/TypeScript环境搭建/index.html">
@@ -147,15 +147,9 @@
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807223035043-361688856.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807223502918-1571138071.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807230013668-1424909177.png">
-<meta property="og:image" content="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif">
-<meta property="og:image" content="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807230717700-1517697557.png">
-<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
-<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
-<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
-<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807232218309-682251698.png">
-<meta property="og:updated_time" content="2018-04-10T10:55:55.450Z">
+<meta property="og:updated_time" content="2018-04-10T11:04:43.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TypeScript环境搭建">
 <meta name="twitter:description" content="阅读目录  [环境搭建] [第一部分、简介] [第二部分、环境准备] [第三部分、使用Visual Studio Code进行开发] [其他相关内容]">
@@ -439,7 +433,7 @@ undefined
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,215
+                  1,253
                 </span>
               
 
@@ -516,8 +510,8 @@ undefined
 <p>tsconfig.json：TypeScript编译配置文件</p>
 <p>另外.vscode是VS Code开发工具特有的文件夹，主要用来存放调试时需要用到的配置文件。</p>
 <p><a href="https://www.cnblogs.com/Leo_wl/p/5751187.html#_labelTop" target="_blank" rel="noopener"></a></p>
-<h3 id="一、tsconfig-json"><a href="#一、tsconfig-json" class="headerlink" title="一、tsconfig.json"></a>一、tsconfig.json</h3><p>按 Ctrl+C 复制代码</p>
-<p>按 Ctrl+C 复制代码</p>
+<h3 id="一、tsconfig-json"><a href="#一、tsconfig-json" class="headerlink" title="一、tsconfig.json"></a>一、tsconfig.json</h3><p>`{<br>    “compilerOptions”: {<br>        “target”: “es5”,<br>        “noImplicitAny”: false,<br>        “module”: “commonjs”,<br>        “removeComments”: true,<br>        “sourceMap”: false,<br>        “outDir”: “js”<br>    },<br>    “include”:[<br>        “ts”<br>    ],<br>    “exclude”: [<br>        “js”<br>    ]<br>}</p>
+<p>`</p>
 <p>有几个重要的属性需要解释一下：</p>
 <ul>
 <li><ul>
@@ -534,23 +528,18 @@ undefined
 <p><a href="https://www.cnblogs.com/Leo_wl/p/5751187.html#_labelTop" target="_blank" rel="noopener"></a></p>
 <h3 id="二、添加Demo源文件"><a href="#二、添加Demo源文件" class="headerlink" title="二、添加Demo源文件"></a>二、添加Demo源文件</h3><p>在ts文件夹添加 app.ts 和 demo.ts 两个源文件，目录结构和源文件内容如下</p>
 <p><img src="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807230013668-1424909177.png" alt="img"></p>
-<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"> Demo.ts</p>
-<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"> app.ts</p>
 <h3 id="三、配置编译和调试文件"><a href="#三、配置编译和调试文件" class="headerlink" title="三、配置编译和调试文件"></a>三、配置编译和调试文件</h3><p>在.vscode里添加tasks.json文件</p>
-<p>按 Ctrl+C 复制代码</p>
-<p>按 Ctrl+C 复制代码</p>
+<p>`{<br>    // See <a href="https://go.microsoft.com/fwlink/?LinkId=733558" target="_blank" rel="noopener">https://go.microsoft.com/fwlink/?LinkId=733558</a><br>    // for the documentation about the tasks.json format<br>    “version”: “0.1.0”,<br>    “command”: “tsc”,<br>    “isShellCommand”: true,<br>    “args”: [“-p”, “.”],<br>    “showOutput”: “always”,<br>    “problemMatcher”: “$tsc”<br>}</p>
+<p>`</p>
 <p>切换到调试模式，点击配置按钮，选择Node.js环境。因为接下来的Demo演示都将在Node.js环境下进行。</p>
 <p><img src="https://images2015.cnblogs.com/blog/51831/201608/51831-20160807230717700-1517697557.png" alt="img"></p>
 <p>修改生成的launch.json文件内容，指定启动入口文件的路径</p>
-<p>按 Ctrl+C 复制代码</p>
-<p>按 Ctrl+C 复制代码</p>
+<p>`</p>
+<p>{<br>    “version”: “0.2.0”,<br>    “configurations”: [<br>        {<br>            “name”: “启动”,<br>            “type”: “node”,<br>            “request”: “launch”,<br>            “program”: “${workspaceRoot}/js/app.js”,<br>            “stopOnEntry”: false,<br>            “args”: [],<br>            “cwd”: “${workspaceRoot}”,<br>            “preLaunchTask”: null,<br>            “runtimeExecutable”: null,<br>            “runtimeArgs”: [<br>                “–nolazy”<br>            ],<br>            “env”: {<br>                “NODE_ENV”: “development”<br>            },<br>            “externalConsole”: false,<br>            “sourceMaps”: false,<br>            “outDir”: null<br>        },<br>        {<br>            // ……<br>        },<br>        {<br>           // ……<br>        }<br>    ]<br>}</p>
+<p>`</p>
 <p>以上配置完成后，使用 Ctrl+Shift+B 启动编译，如果VS Code的OUTPUT窗口没有任何异常信息显示，则表示编译成功。在js文件夹里将会生成编译后的JavaScript文件</p>
 <p>demo.js</p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="string">"use strict"</span>;</span><br><span class="line"> <span class="number">2</span> <span class="keyword">var</span> Demo = (<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line"> <span class="number">3</span>     <span class="function"><span class="keyword">function</span> <span class="title">Demo</span><span class="params">(a, b)</span> </span>&#123;</span><br><span class="line"> <span class="number">4</span>         <span class="keyword">this</span>.a = a;</span><br><span class="line"> <span class="number">5</span>         <span class="keyword">this</span>.b = b;</span><br><span class="line"> <span class="number">6</span>     &#125;</span><br><span class="line"> <span class="number">7</span>     Demo.prototype.sum = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line"> <span class="number">8</span>         <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="keyword">this</span>.b;</span><br><span class="line"> <span class="number">9</span>     &#125;;</span><br><span class="line"><span class="number">10</span>     <span class="keyword">return</span> Demo;</span><br><span class="line"><span class="number">11</span> &#125;());</span><br><span class="line"><span class="number">12</span> exports.Demo = Demo;</span><br></pre></td></tr></table></figure>
-<p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
 <p>app.js</p>
 <figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span><span class="string">"use strict"</span>;</span><br><span class="line"><span class="symbol">2 </span>var demo_1 = require(<span class="comment">'./models/demo');</span></span><br><span class="line"><span class="symbol">3 </span>var demo = <span class="keyword">new</span> demo_1.Demo(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="symbol">4 </span>console.<span class="keyword">log</span>(demo.sum());</span><br></pre></td></tr></table></figure>
 <p>对比TypeScript源码文件和生成之后的JavaScript文件，结构发生了较大变化。</p>
@@ -611,9 +600,9 @@ undefined
       
         <div class="post-tags">
           
-            <a href="/tags/TypeScript/" <i class="fa fa-tag"></i> TypeScript</a>
-          
             <a href="/tags/javascript/" <i class="fa fa-tag"></i> javascript</a>
+          
+            <a href="/tags/TypeScript/" <i class="fa fa-tag"></i> TypeScript</a>
           
         </div>
       
@@ -888,7 +877,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.8k</span>
+    <span title="Site words total count">8.9k</span>
   
 </div>
 
